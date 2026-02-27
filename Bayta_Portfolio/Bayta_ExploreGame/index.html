@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="quiz-container">
+    
+        <div id="start-screen" class="quiz-header">
+            <h1>🧠 Quiz Time!</h1>
+            <p style="color: #666; margin-bottom: 30px;">Test your knowledge about Web & Technology!</p>
+            <button class="btn" onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="hidden">
+            <div class="quiz-header">
+                <h1>Web & Tech Quiz</h1>
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+            </div>
+
+            <div class="question-counter" id="question-counter"></div>
+
+            <div class="question-container">
+                <div class="question-text" id="question-text"></div>
+                <div class="options-container" id="options-container"></div>
+            </div>
+
+            <div class="button-container">
+                <button class="btn btn-secondary" id="restart-btn" onclick="restartQuiz()">Restart</button>
+                <button class="btn" id="next-btn" onclick="nextQuestion()" disabled>Next →</button>
+            </div>
+        </div>
+
+        <div id="score-screen" class="score-container hidden">
+            <div class="score-circle">
+                <span class="score-number" id="final-score">0</span>
+            </div>
+            <p class="score-text">Your Score</p>
+            <p class="score-message" id="score-message"></p>
+            <div class="score-buttons">
+                <button class="btn" onclick="restartQuiz()">Play Again</button>
+                <a href="../index.html" class="btn btn-home">Back Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
